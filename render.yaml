@@ -1,0 +1,22 @@
+services:
+  - type: web
+    name: krishai
+    runtime: docker
+    plan: free
+    dockerfilePath: ./Dockerfile
+    dockerContext: .
+    healthCheckPath: /health
+    autoDeployTrigger: commit
+    envVars:
+      - key: ASPNETCORE_ENVIRONMENT
+        value: Production
+      - key: AI__Provider
+        value: OpenRouter
+      - key: AI__BaseUrl
+        value: https://openrouter.ai/api/v1/
+      - key: AI__ChatModel
+        value: openrouter/free
+      - key: AI__AppTitle
+        value: KrishAI
+      - key: AI__ApiKey
+        sync: false

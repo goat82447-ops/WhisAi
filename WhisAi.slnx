@@ -1,0 +1,6 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/WhisAi.Api/WhisAi.Api.csproj" />
+    <Project Path="src/WhisAi.Desktop/WhisAi.Desktop.csproj" />
+  </Folder>
+</Solution>
